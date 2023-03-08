@@ -36,7 +36,7 @@ main () {
 ```
 
 
-
+Bazı Style çalışmaları, yazı ortalama ...
 ```
 import 'package:flutter/material.dart';
 
