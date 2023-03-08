@@ -65,6 +65,65 @@ main () {
 ```
 
 
+Yazı ortalama
+```
+import 'package:flutter/material.dart';
+
+main () {
+  runApp(
+    MaterialApp(
+      home: Material(
+        color: Colors.grey, // Arka Plan Rengi Gri
+        child: Center(
+          child: Text("Flutter yazısı merkezde" // Yazı ORTALANMIS oldu
+            , style: TextStyle(color: Colors.white
+            , fontSize: 25),),
+        ),
+      ),
+    )
+  );
+}
+```
+
+
+
+Değişkenler
+```
+import 'package:flutter/material.dart';
+
+main () {
+  String ad= " Flutter Porgramlama "; // String değişken türü
+  int tamsayi = 19; // Tam sayi değişken türü
+  int tamsayi2 = 1;
+
+  runApp(
+    MaterialApp(
+      home: Material(
+        color: Colors.grey, // Arka Plan Rengi Gri
+        child: Center(
+          child: Text(ad + (tamsayi + tamsayi2).toString() // tam sayılar ve string çağrılmış oldu
+            // Ayrıca int olan bir ifadeyi stringe dönüştürdük yoksa hata alırız
+            // Toplama yapmaz çünkü ikisi de string türünde yapması için
+            // iki sayi parantez içinde toplanıp stringe dönüşümü yapılmalıdır
+            , style: TextStyle(color: Colors.white
+            , fontSize: 25),),
+        ),
+      ),
+    )
+  );
+}
+
+```
+
+
+
+
+```
+```
+
+
+
+
 
 ```
 ```
@@ -77,13 +136,13 @@ main () {
 
 
 
-
 ```
 ```
 
 
 
-
+```
+```
 
 ```
 ```
