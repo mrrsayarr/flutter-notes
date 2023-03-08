@@ -117,8 +117,33 @@ main () {
 
 
 
-
+"double" değişkeni, "string" türündeki değişkeni "int" değişkene çevirme
 ```
+import 'dart:convert';
+import 'package:flutter/material.dart';
+
+main () {
+  String ad= " Flutter Porgramlama "; // String değişken türü
+  int tamsayi = 19; // Tam sayi değişken türü
+  double sayi=7.3; // Double sayi değişkeni ondalık türü için kullanılır
+  // float değişkeni dart dilinde mevcut değildir
+
+  String no="10";
+
+  runApp(
+    MaterialApp(
+      home: Material(
+        color: Colors.grey, // Arka Plan Rengi Gri
+        child: Center( // Merkez konumunda şu an
+          child: Text( //(tamsayi + sayi).toString()
+            (tamsayi + int.parse(no)).toString() // String bir ifadeyi int türüne dönüştürme
+            , style: TextStyle(color: Colors.white, fontSize: 25),),
+        ),
+      ),
+    )
+  );
+}
+
 ```
 
 
