@@ -1,6 +1,6 @@
 # Flutter Konu Anlatımları
 Materyal Kullanımı için basit bir kod.
-'''
+```
 import 'package:flutter/material.dart'; // Materyal
 
 main() { // Fonksiyon
@@ -14,10 +14,10 @@ main() { // Fonksiyon
     )
   );
 }
-'''
+```
 
 Text Direction Kullanımı 
-'''
+```
 import 'package:flutter/material.dart';
 
 main () {
@@ -33,9 +33,11 @@ main () {
     )
   );
 }
-'''
+```
 
-'''
+
+
+```
 import 'package:flutter/material.dart';
 
 main () {
@@ -60,4 +62,44 @@ main () {
     )
   );
 }
-'''
+```
+
+
+
+```
+```
+
+
+
+
+```
+```
+
+
+
+
+```
+```
+
+
+
+
+
+```
+```
+
+
+
+
+```
+```
+
+
+
+```
+```
+
+
+
+```
+```
