@@ -230,13 +230,247 @@ main() {
 ```
 
 
+Dizileri tanımlama ve elemanları gösterme
+```
+import 'package:flutter/material.dart';
+
+main() {
+  // Dizi tanımlama
+  List list = []; // Hem double hem de string türünden yazılabilir.
+  List<String> sehirler = ["İstanbul", "Ankara"]; // Sadece string türünden veriler girilebilir.
+  // list.add("İstanbul"); // indeks 0
+  // list.add("Ankara"); // indeks 1
+  // YA DA aşağıdaki şekilde belirtilebilir
+  list.addAll(["İstanbul", "Ankara", "Amasaya"]);
+
+  runApp(MaterialApp(
+    home: Material(
+      color: Colors.grey[850], // Arka Plan Rengi Gri Tonu
+      child: Center(
+        child: Container(
+          child: Text(list[0], textDirection: TextDirection.ltr,
+            style: TextStyle(fontSize: 30, color: Colors.white),
+
+          ),
+        ),
+      ),
+    ),
+  ));
+}
+
+```
+
+
+Row Kullanımı
+```
+import 'package:flutter/material.dart';
+
+main() {
+// Merhaba yanında Flutter yazmak istersek Row veya Column kullanmak gerekir
+  runApp(MaterialApp(
+    home: Material(
+      color: Colors.grey[850],
+      child: Center(
+        child: Container( // Row veya Column'a arkaplan rengi verilmediği için Container oluşturduk
+          color: Colors.orange,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const <Widget>[
+              Text(
+                "Merhaba ",
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
+              Text(
+                "Flutter ",
+                style: TextStyle(fontSize: 25, color: Colors.red),
+              ),
+              Text(
+                "Dart",
+                style: TextStyle(fontSize: 25, color: Colors.black87),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+  ));
+}
+
+```
+
+
+
+Column Kullanımı
+```
+import 'package:flutter/material.dart';
+
+main() {
+  runApp(MaterialApp(
+    home: Material(
+      color: Colors.grey[850],
+      child: Center(
+        child: Container(
+            color: Colors.orange,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  "Merhaba ",
+                  style: TextStyle(fontSize: 25, color: Colors.blue),
+                ),
+                Text(
+                  "Flutter ",
+                  style: TextStyle(fontSize: 25, color: Colors.red),
+                ),
+                Text(
+                  "Dart",
+                  style: TextStyle(fontSize: 25, color: Colors.black87),
+                ),
+              ],
+            )),
+      ),
+    ),
+  ));
+}
+```
+
+
+Column ve Row 
+```
+import 'package:flutter/material.dart';
+
+main() {
+  runApp(MaterialApp(
+    home: Material(
+      color: Colors.grey[850],
+      child: Center(
+        child: Container(
+            color: Colors.orange,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                    color: Colors.lightBlueAccent,
+                    margin: EdgeInsets.only(top: 20, bottom: 20, right: 20),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(right: 10,left: 10) ,
+                          child: Text(
+                            "Widget 1 ",
+                            style: TextStyle(fontSize: 25),
+                          ),
+                        ),
+                        Text(
+                          "Widget 2 ",
+                          style: TextStyle(fontSize: 25),
+                        ),
+                        Text(
+                          "Widget 3 ",
+                          style: TextStyle(fontSize: 25),
+                        ),
+                      ],
+                    )),
+                Container(
+                    color: Colors.lightBlueAccent,
+                    margin: EdgeInsets.only(top: 20, bottom: 20,left: 20),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(right: 10, left: 10) ,
+                          child: Text(
+                            "Widget 1",
+                            style: TextStyle(fontSize: 25),
+                          ),
+                        ),
+                        Text(
+                          "Widget 2",
+                          style: TextStyle(fontSize: 25),
+                        ),
+                        Text(
+                          "Widget 3",
+                          style: TextStyle(fontSize: 25),
+                        ),
+                      ],
+                    ))
+              ],
+            )),
+      ),
+    ),
+  ));
+}
+```
+
+
+
+```
+
+Expanded kullanımı
+```
+import 'package:flutter/material.dart';
+
+main() {
+  runApp(MaterialApp(
+      home: Material(
+        color: Colors.purple,
+        child: Container(
+          color: Colors.orange,
+          child: Row(
+            children: <Widget> [
+              Text("Merhaba Flutter", style: TextStyle(fontSize: 30),),
+              Icon(Icons.camera),
+              Expanded( // bazı durumlarda yazı ekrana sığmazsa hata verir
+                  // Hata vermemesi için Expanded kullanılır
+                  child: Text("Merhaba Flutter", style: TextStyle(fontSize: 30),),
+              )
+            ],
+          ),
+    ),
+  )));
+}
+
+```
+
+
 
 ```
 ```
 
+
+
 ```
 ```
 
+
+```
+```
+
+
+
+```
+```
+
+
+
+```
+```
+
+
+
+```
+```
+
+
+
+```
+```
+
+
+
+```
+```
 
 
 
