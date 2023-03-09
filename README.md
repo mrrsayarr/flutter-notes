@@ -149,19 +149,84 @@ main () {
 
 
 
+Margin ve Padding özellikleri
+```
+import 'package:flutter/material.dart';
+
+main() {
+  runApp(MaterialApp(
+    home: Material(
+      color: Colors.grey[350], // Arka Plan Rengi Gri Tonu
+      child: Container(
+        margin: EdgeInsets.only(left: 40, top: 60), // Sadece üst ve soldan boşluk bırakır
+        // EdgeInsets.all(50)
+        // istersek sadece bir kenardan da kısıtlayabiliriz
+        // margin container ve dış taraf arasında boşluk bırakır
+        // padding ise container içini ilgilendirir
+        padding: EdgeInsets.all(22.5),
+        color: Colors.greenAccent,
+        child: Text(
+          "Merhaba Flutter",
+          textAlign: TextAlign.start,
+          style: TextStyle(color: Colors.white, fontSize: 25),
+        ),
+      ),
+    ),
+  ));
+}
 
 ```
+
+
+
+Aligment kullanımı ve koordinat sisteminde gösterimi
+```
+import 'package:flutter/material.dart';
+
+main() {
+  runApp(MaterialApp(
+    home: Material(
+      color: Colors.grey[350], // Arka Plan Rengi Gri Tonu
+      child: Container(
+        color: Colors.greenAccent,
+
+        // alignment: Alignment.topCenter, // Yukarı ve orataya sabitler
+        alignment: Alignment.center,
+        // center yerine (0,0) şeylerde yazılabilir
+        child: Text(
+          "Merhaba Flutter",
+          textAlign: TextAlign.start,
+          style: TextStyle(color: Colors.white, fontSize: 25,
+            background: Paint()..color=Colors.deepOrange // Yazı Arkaplan rengi
+             ),
+        ),
+      ),
+    ),
+  ));
+}
+
 ```
 
 
-
-
+Container özelliklerine devam
 ```
-```
+import 'package:flutter/material.dart';
 
-
-
-```
+main() {
+  runApp(MaterialApp(
+    home: Material(
+      color: Colors.grey[350], // Arka Plan Rengi Gri Tonu
+      child: Center(
+        child: Container(
+          // width ve height diyerek genişlik ve yüksekliği ile uğraşabiliriz
+          // transform: Matrix4.rotationZ(0.8), yazıyı döndürebiliriz container içinde
+          child: Text("Flutter", textDirection: TextDirection.ltr,
+            style: TextStyle(fontSize: 30, color: Colors.white)),
+        ),
+      ),
+    ),
+  ));
+}
 ```
 
 
