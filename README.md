@@ -119,7 +119,7 @@ main () {
 
 "double" değişkeni, "string" türündeki değişkeni "int" değişkene çevirme
 ```
-import 'dart:convert';
+import 'dart:convert'; // Otomatik olarak toString() kullanıldığında gelecektir
 import 'package:flutter/material.dart';
 
 main () {
