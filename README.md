@@ -404,9 +404,6 @@ main() {
 ```
 
 
-
-```
-
 Expanded kullanımı
 ```
 import 'package:flutter/material.dart';
@@ -430,6 +427,8 @@ main() {
     ),
   )));
 }
+```
+
 
 ```
 
