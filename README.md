@@ -558,18 +558,161 @@ main() {
 
 
 ```
+
+Card, Container, elevation ve Card içinde Center kullanımı
 ```
-s
+import 'package:flutter/material.dart';
+
+main() {
+  runApp(MaterialApp(
+      home: Material(
+        color: Colors.teal,
+        child: GridView.count(
+          crossAxisCount: 2, // 3 Sütun oluşturuldu
+          crossAxisSpacing: 20, // Sütunlar arası boşluğu ayarlar
+          mainAxisSpacing: 20, // Satırlar arası boşluğu ayarlar
+          childAspectRatio: 1, // 1/2, // Genişlik ve Yükseklik arasında olacak oranı ayarlar
+
+          // Kayma yönü default olarak aşağı yönlüdür bunu değiştirmek için:
+          // scrollDirection: Axis.horizontal,
+          
+          padding: EdgeInsets.all(10), // Container ile arasında 10 birimlik boş yer bırakır
+
+          children: <Widget>[
+            Card(margin: EdgeInsets.only(top: 20) ,color: Colors.grey ,child: Text("Widget 1", style: TextStyle(fontSize: 30),)),
+            Card(margin: EdgeInsets.only(top: 20) ,color: Colors.grey ,child: Text("Widget 2", style: TextStyle(fontSize: 30),)),
+            Card(elevation:15 ,color: Colors.grey ,child: Text("Widget 4", style: TextStyle(fontSize: 30),)),
+            Card(elevation:15 ,color: Colors.grey ,child: Text("Widget 5", style: TextStyle(fontSize: 30),)),
+            // "elevation" tüm kenarlara gölgelik verir
+
+            Card(color: Colors.grey ,child: Center(child: Text("Widget 6", style: TextStyle(fontSize: 30),))),
+            Card(color: Colors.grey ,child: Center(child: Text("Widget 7", style: TextStyle(fontSize: 30),))),
+            // Card içini ortalamak için Text kısmını Center içine almamız gerekir
+            Card(color: Colors.grey ,child: Center(child: Text("Widget 8", style: TextStyle(fontSize: 30),))),
+            Card(color: Colors.grey ,child: Center(child: Text("Widget 9", style: TextStyle(fontSize: 30),))),
+          ],
+        ),
+  )));
+}
+
 
 ```
-```
 
-s
+Column Widget'ine Scroll verme özelliği
+```
+import 'package:flutter/material.dart';
+
+main() {
+  runApp(MaterialApp(
+      home: Material(
+        color: Colors.teal,
+        // Column'larda scroll özelliği yoktur bunun için
+        // "Column", "SingleChildScrollView" içine kullanılır
+        child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(), // Scrollbar bitiminde animasyon oluşur
+          // Farklı farklı animasyonlarda eklenebilir
+
+          padding: EdgeInsets.all(20),
+
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Column içinde çalışmaz
+            
+            children:<Widget> [
+              Text("Widget 1", style: TextStyle(fontSize: 30),),
+              Text("Widget 2", style: TextStyle(fontSize: 30),),
+              Text("Widget 3", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 18",style: TextStyle(fontSize: 30),),
+              Text("Widget 18",style: TextStyle(fontSize: 30),),
+              Text("Widget 18",style: TextStyle(fontSize: 30),),
+              Text("Widget 18",style: TextStyle(fontSize: 30),),
+              Text("Widget 22",style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 4", style: TextStyle(fontSize: 30),),
+              Text("Widget 18",style: TextStyle(fontSize: 30),),
+              Text("Widget 18",style: TextStyle(fontSize: 30),),
+              Text("Widget 18",style: TextStyle(fontSize: 30),),
+              Text("Widget 18",style: TextStyle(fontSize: 30),),
+              Text("Widget 22",style: TextStyle(fontSize: 30),),
+            ],
+          ),
+        )
+  )));
+}
 
 ```
+Row Widget'ine Scroll verme özelliği
 ```
+import 'package:flutter/material.dart';
 
-s
+main() {
+  runApp(MaterialApp(
+      home: Material(
+          color: Colors.teal,
+          // Column'larda scroll özelliği yoktur bunun için
+          // "Column", "SingleChildScrollView" içine kullanılır
+          child: SingleChildScrollView(
+            physics:
+                BouncingScrollPhysics(), // Scrollbar bitiminde animasyon oluşur
+            padding: EdgeInsets.all(20),
+
+            scrollDirection: Axis
+                .horizontal, // Row'un çalışması için scrollu yatay yönlendirmek gerekir.
+
+            child: Row(
+              children: <Widget>[
+                Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      "Widget 1 ",
+                      style: TextStyle(fontSize: 30),
+                    )),
+                Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      "Widget 2 ",
+                      style: TextStyle(fontSize: 30),
+                    )),
+                SizedBox(
+                  width: 40,
+                ), // Araya 20 birimlik boşluk bırakır
+                Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      "Widget 3 ",
+                      style: TextStyle(fontSize: 30),
+                    )),
+                Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      "Widget 4 ",
+                      style: TextStyle(fontSize: 30),
+                    )),
+                Container(
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      "Widget 5 ",
+                      style: TextStyle(fontSize: 30),
+                    )),
+              ],
+            ),
+          ))));
+}
 
 ```
 ```
