@@ -1,4 +1,6 @@
-# Flutter Konu Anlatımları
+# Flutter Konu Anlatımı 
+### Pratik Kodlarım
+
 Materyal Kullanımı için basit bir kod.
 ```
 import 'package:flutter/material.dart'; // Materyal
@@ -35,7 +37,6 @@ main () {
 }
 ```
 
-
 Bazı Style çalışmaları, yazı ortalama ...
 ```
 import 'package:flutter/material.dart';
@@ -64,7 +65,6 @@ main () {
 }
 ```
 
-
 Yazı ortalama
 ```
 import 'package:flutter/material.dart';
@@ -84,8 +84,6 @@ main () {
   );
 }
 ```
-
-
 
 Değişkenler
 ```
@@ -114,8 +112,6 @@ main () {
 }
 
 ```
-
-
 
 "double" değişkeni, "string" türündeki değişkeni "int" değişkene çevirme
 ```
@@ -146,9 +142,6 @@ main () {
 
 ```
 
-
-
-
 Margin ve Padding özellikleri
 ```
 import 'package:flutter/material.dart';
@@ -176,8 +169,6 @@ main() {
 }
 
 ```
-
-
 
 Aligment kullanımı ve koordinat sisteminde gösterimi
 ```
@@ -207,7 +198,6 @@ main() {
 
 ```
 
-
 Container özelliklerine devam
 ```
 import 'package:flutter/material.dart';
@@ -228,7 +218,6 @@ main() {
   ));
 }
 ```
-
 
 Dizileri tanımlama ve elemanları gösterme
 ```
@@ -259,7 +248,6 @@ main() {
 }
 
 ```
-
 
 Row Kullanımı
 ```
@@ -298,8 +286,6 @@ main() {
 
 ```
 
-
-
 Column Kullanımı
 ```
 import 'package:flutter/material.dart';
@@ -333,7 +319,6 @@ main() {
   ));
 }
 ```
-
 
 Column ve Row 
 ```
@@ -402,7 +387,6 @@ main() {
   ));
 }
 ```
-
 
 Expanded kullanımı
 ```
@@ -656,6 +640,7 @@ main() {
 }
 
 ```
+
 Row Widget'ine Scroll verme özelliği
 ```
 import 'package:flutter/material.dart';
@@ -717,8 +702,11 @@ main() {
 ```
 
 Iconlar, Container
+
 Container içindeki veriyi başa alma
+
 Iconları ortalama
+
 Icon boyutları 
 ```
 
@@ -864,9 +852,13 @@ main() {
 ```
 
 ListView kullanımı
+
 Card'larda yükseklik ancak Container içinden verilebilir
+
 scrollDirection: Axis.horizontal, // Listeyi yatay yapar
+
 Card widgetlerinde default margin işlemleri yapılırken, oval köşeler gelir
+
 Container  widgetlerinde default gelmez
 ```
 import 'package:flutter/material.dart';
