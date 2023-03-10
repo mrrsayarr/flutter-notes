@@ -715,14 +715,216 @@ main() {
 }
 
 ```
+
+Iconlar, Container
+Container içindeki veriyi başa alma
+Iconları ortalama
+Icon boyutları 
 ```
 
-s
+import 'package:flutter/material.dart';
+
+main() {
+  runApp(MaterialApp(
+      home: Material(
+    color: Colors.blueGrey,
+    child: ListView(
+      physics: BouncingScrollPhysics(), // scroll bar bitimine animasyon ekler
+      padding: EdgeInsets.all(20),
+      // reverse: true, // Liste ters döner, alt üst olur yani
+      // scrollDirection: Axis.horizontal, // Listeyi yatay yapar
+
+      children: <Widget>[
+        Text(
+          "Harita",
+          textAlign: TextAlign
+              .center, // Yazıları da icon gibi ortalamak için kullanılır
+          style: TextStyle(fontSize: 30),
+        ),
+        Container( // Iconu başa almak için Container içine aldık
+          alignment: Alignment.topLeft,
+            child: Icon(
+          Icons.map,
+          size: 50,
+        )),
+        Text(
+          "ListView kamera",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 30),
+        ),
+        Icon(
+          Icons.navigate_before,
+          size: 50,
+        ),
+        Text(
+          "Harita",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 30),
+        ),
+        Icon(
+          Icons.navigate_next,
+          size: 50,
+        ),
+        Text(
+          "ListView kamera",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 30),
+        ),
+        Icon(
+          Icons.add_call,
+          size: 50,
+        ),
+        Text(
+          "Harita",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 30),
+        ),
+        Icon(
+          Icons.gif_box,
+          size: 50,
+        ),
+        Text(
+          "ListView kamera",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 30),
+        ),
+        Icon(
+          Icons.facebook,
+          size: 50,
+        ),
+        Text(
+          "Harita",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 30),
+        ),
+        Icon(
+          Icons.install_mobile_sharp,
+          size: 50,
+        ),
+        Text(
+          "ListView kamera",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 30),
+        ),
+        Icon(
+          Icons.camera,
+          size: 50,
+        ),
+        Text(
+          "Harita",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 30),
+        ),
+        Icon(
+          Icons.map,
+          size: 50,
+        ),
+        Text(
+          "ListView kamera",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 30),
+        ),
+        Icon(
+          Icons.camera,
+          size: 50,
+        ),
+        Text(
+          "Harita",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 30),
+        ),
+        Icon(
+          Icons.map,
+          size: 50,
+        ),
+        Text(
+          "ListView kamera",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 30),
+        ),
+        Icon(
+          Icons.camera,
+          size: 50,
+        ),
+        Text(
+          "Harita",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 30),
+        ),
+        Icon(
+          Icons.map,
+          size: 50,
+        )
+      ],
+    ),
+  )));
+}
+
 
 ```
-```
 
-s
+ListView kullanımı
+Card'larda yükseklik ancak Container içinden verilebilir
+scrollDirection: Axis.horizontal, // Listeyi yatay yapar
+Card widgetlerinde default margin işlemleri yapılırken, oval köşeler gelir
+Container  widgetlerinde default gelmez
+```
+import 'package:flutter/material.dart';
+
+main() {
+  runApp(MaterialApp(
+      home: Material(
+    color: Colors.blueGrey,
+    child: ListView(
+      physics: BouncingScrollPhysics(), // scroll bar bitimine animasyon ekler
+      padding: EdgeInsets.all(20),
+      // reverse: true, // Liste ters döner, alt üst olur yani
+      // scrollDirection: Axis.horizontal, // Listeyi yatay yapar
+
+      children: <Widget>[
+        Card(
+          child: Text(
+            "Harita",
+            textAlign: TextAlign
+                .center, // Yazıları da icon gibi ortalamak için kullanılır
+            style: TextStyle(fontSize: 30),
+          ),
+        ),
+
+        Card(
+          color: Colors.blue,
+          child: Container(
+            alignment: Alignment.center,
+            height: 100, // Card'larda yükseklik ancak Container içinden verilebilir
+            child: Text(
+              "ListView kamera",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 30),
+            ),
+          ),
+        ),
+
+        // Card widgetlerinde default margin işlemleri yapılırken, oval köşeler gelir
+        // Container  widgetlerinde default gelmez
+
+        Container(
+          color: Colors.white,
+            child: Icon(
+              Icons.map,
+              size: 50,
+            )),
+        Container(
+          color: Colors.white,
+          child: Icon(
+            Icons.map,
+            size: 50,
+          ),
+        ),
+      ],
+    ),
+  )));
+}
+
 
 ```
 ```
