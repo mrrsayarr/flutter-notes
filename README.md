@@ -454,9 +454,107 @@ main() {
 }
 ```
 
-GridView Kullanımı
+GridView ve Card Kullanımı
 ```
-s
+import 'package:flutter/material.dart';
+
+main() {
+  runApp(MaterialApp(
+    home: Material(
+      color: Colors.teal,
+      child: Padding(
+        padding: EdgeInsets.all(20.0), // Padding değerleri burada belirlendi
+        child: GridView.count(
+          crossAxisCount: 3,
+          crossAxisSpacing: 20,
+          mainAxisSpacing: 20,
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.all(10.0), // Margin değerleri burada belirlendi
+              child: Card(
+                color: Colors.grey,
+                child: Text(
+                  "Widget 1",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: Card(
+                color: Colors.grey,
+                child: Text(
+                  "Widget 2",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: Card(
+                color: Colors.grey,
+                child: Text(
+                  "Widget 4",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: Card(
+                color: Colors.grey,
+                child: Text(
+                  "Widget 5",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: Card(
+                color: Colors.grey,
+                child: Text(
+                  "Widget 6",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: Card(
+                color: Colors.grey,
+                child: Text(
+                  "Widget 7",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: Card(
+                color: Colors.grey,
+                child: Text(
+                  "Widget 8",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(10.0),
+              child: Card(
+                color: Colors.grey,
+                child: Text(
+                  "Widget 9",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  ));
+}
 
 
 ```
