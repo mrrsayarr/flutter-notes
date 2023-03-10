@@ -429,12 +429,32 @@ main() {
 }
 ```
 
-
+Expanded Kullanımı, flex ve Row kullanımı
 ```
-s
+import 'package:flutter/material.dart';
 
-
+main() {
+  runApp(MaterialApp(
+      home: Material(
+        color: Colors.purple,
+        child: Container(
+          color: Colors.orange,
+          child: Row(
+            children: <Widget> [
+              // Eğer hepsine Expanded koyulursa eşit bir şekilde bölünür
+              Expanded(flex: 1, child: Container( width: 100, height: 50, color: Colors.white,)),
+              Expanded(flex: 2, child: Container( width: 100, height: 50, color: Colors.purple,)),
+              // Ekrana sığacak şekilde ayarlar Expanded
+              Expanded(flex: 1, child: Container( width: 100, height: 50, color: Colors.green,)),
+              // flex yanına yazılan sayı ile orantılı bir alana bölünür
+            ],
+          ),
+    ),
+  )));
+}
 ```
+
+GridView Kullanımı
 ```
 s
 
