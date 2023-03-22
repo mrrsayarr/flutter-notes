@@ -1,7 +1,7 @@
 # Flutter Konu Anlatımı 
 ### Pratik Kodlarım
 
-Materyal Kullanımı için basit bir kod.
+Materyal Kullanımı
 ```
 import 'package:flutter/material.dart'; // Materyal
 
